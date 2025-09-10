@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash Taka (ট্র্যাশ টাকা) | আপনার বর্জ্যকে পুরস্কারে পরিণত করুন</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♻️</text></svg>">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-hind {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        /* Hide English by default */
+        [data-lang="en"] { display: none; }
+        html.en [data-lang="bn"] { display: none; }
+        html.en [data-lang="en"] { display: inline-block; }
+        
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+
+        /* App tour styles */
+        .phone-screen {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .nav-item.active svg {
+            color: #16A34A; /* green-600 */
+        }
+        .nav-item.active span {
+             color: #16A34A; /* green-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl">♻️</span>
+                <span class="text-2xl font-bold text-green-600 font-inter">Trash Taka</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#how-it-works" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">যেভাবে কাজ করে</span><span data-lang="en">How It Works</span></a>
+                <a href="#app-tour" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">অ্যাপ পরিচিতি</span><span data-lang="en">App Tour</span></a>
+                <a href="#why-join" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">কেন যোগ দেবেন</span><span data-lang="en">Why Join</span></a>
+                <a href="#faq" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">প্রশ্নোত্তর</span><span data-lang="en">FAQ</span></a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <button id="lang-switcher" class="text-sm font-semibold text-gray-500 hover:text-green-600 border rounded-full px-3 py-1">
+                    <span data-lang="bn">English</span><span data-lang="en">বাংলা</span>
+                </button>
+                <a href="#join-movement" class="bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-colors shadow-md">
+                    <span data-lang="bn">আন্দোলনে যোগ দিন</span><span data-lang="en">Join the Movement</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="pt-24">
+        <section class="container mx-auto px-6 py-16 md:py-24 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                    <span data-lang="bn">আপনার দৈনন্দিন প্লাস্টিক বর্জ্য,</span><span data-lang="en">Your Daily Plastic Waste,</span><br>
+                    <span class="text-green-600" data-lang="bn">এখন আপনার পুরস্কার।</span><span class="text-green-600" data-lang="en">Now Your Reward.</span>
+                </h1>
+                <p class="mt-6 text-xl md:text-2xl font-semibold text-gray-500">
+                    <span data-lang="bn">ট্র্যাশ-টাকা, গ্রিন-ঢাকা</span><span data-lang="en">Trash-Taka, Green-Dhaka</span>
+                </p>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    <span data-lang="bn">ট্র্যাশ টাকা ঢাকার পরিবারগুলোর জন্য রিসাইক্লিংকে সহজ, ঝামেলাহীন এবং rewarding করে তুলছে। আপনার বর্জ্যকে অর্থে, সামাজিক অনুদান বা কমিউনিটির সম্মানে পরিণত করুন।</span>
+                    <span data-lang="en">Trash Taka makes recycling easy, hassle-free, and rewarding for families in Dhaka. Turn your waste into cash, charitable donations, or community pride.</span>
+                </p>
+                <div class="mt-10">
+                    <a href="#join-movement" class="bg-green-600 text-white font-bold py-4 px-8 rounded-full hover:bg-green-700 transition-colors text-lg shadow-xl animate-pulse">
+                        <span data-lang="bn">সবুজ আন্দোলনে যোগ দিন</span><span data-lang="en">Join the Green Movement</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        <span data-lang="bn">মাত্র ৩টি সহজ ধাপে শুরু করুন</span><span data-lang="en">Get Started in 3 Simple Steps</span>
+                    </h2>
+                    <p class="mt-4 text-gray-600 text-lg">
+                        <span data-lang="bn">আমরা রিসাইক্লিং থেকে সব ঝামেলা দূর করে দিয়েছি।</span><span data-lang="en">We've removed all the hassle from recycling.</span>
+                    </p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-3 gap-12 text-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-100 rounded-full p-6 mb-6">
+                           <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">
+                            <span data-lang="bn">১. গ্রিন ব্যাগে রাখুন</span><span data-lang="en">1. Use the Green Bag</span>
+                        </h3>
+                        <p class="text-gray-600">
+                             <span data-lang="bn">আপনার পরিষ্কার প্লাস্টিক বর্জ্য আমাদের দেওয়া বিশেষ "গ্রিন ব্যাগ"-এ রাখুন। কোনো জমানোর ঝামেলা নেই।</span>
+                             <span data-lang-en">Place your clean plastic waste in our special "Green Bag." No need to store anything.</span>
+                        </p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-100 rounded-full p-6 mb-6">
+                            <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6.586 4.414l1.414 1.414M4 12H2m17.414-6.586l-1.414-1.414M12 20.001v-1M4.586 4.586L6 6M20 12h-2M6 18l-1.414 1.414M12 14a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">
+                             <span data-lang="bn">২. ৫-সেকেন্ডে স্ক্যান</span><span data-lang="en">2. Scan in 5 Seconds</span>
+                        </h3>
+                        <p class="text-gray-600">
+                             <span data-lang="bn">আপনার নিয়মিত কালেক্টরকে ব্যাগটি দিন এবং অ্যাপ দিয়ে তার আইডি কার্ডের QR কোডটি স্ক্যান করুন।</span>
+                             <span data-lang-en">Hand the bag to your regular collector and scan their ID card's QR code with the app.</span>
+                        </p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-100 rounded-full p-6 mb-6">
+                            <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">
+                            <span data-lang="bn">৩. গ্রিন পয়েন্টস উপার্জন</span><span data-lang="en">3. Earn Green Points</span>
+                        </h3>
+                        <p class="text-gray-600">
+                            <span data-lang="bn">আপনার অ্যাকাউন্টে স্বয়ংক্রিয়ভাবে "গ্রিন পয়েন্টস" যোগ হবে। এবার আপনার ইচ্ছামত ব্যবহার করুন!</span>
+                            <span data-lang-en">"Green Points" are automatically credited to your account. Now use them as you wish!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Tour Section -->
+        <section id="app-tour" class="bg-gray-50 py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        <span data-lang="bn">একটি অ্যাপ যা সবকিছু সহজ করে দেয়</span><span data-lang="en">An App That Simplifies Everything</span>
+                    </h2>
+                    <p class="mt-4 text-gray-600 text-lg">
+                        <span data-lang="bn">আমাদের সহজ এবং শক্তিশালী অ্যাপের মাধ্যমে আপনার অগ্রগতি ট্র্যাক করুন, দান করুন এবং প্রতিযোগিতা করুন।</span><span data-lang="en">Track your progress, contribute to causes, and compete with your community through our simple, powerful app.</span>
+                    </p>
+                </div>
+                
+                <div class="mt-16 max-w-sm mx-auto bg-gray-800 rounded-[2.5rem] border-[14px] border-gray-800 shadow-2xl">
+                    <div class="w-full h-[600px] bg-white rounded-[2rem] overflow-hidden relative">
+                        <!-- App Screen Content -->
+                        <div id="phone-screen-content" class="p-4 phone-screen h-full">
+                            <!-- Content will be injected here -->
+                        </div>
+
+                        <!-- App Bottom Navigation -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-gray-100 border-t border-gray-200 flex justify-around p-2">
+                            <button data-screen="dashboard" class="nav-item active flex flex-col items-center text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                                <span class="text-xs font-medium"><span data-lang="bn">ড্যাশবোর্ড</span><span data-lang="en">Dashboard</span></span>
+                            </button>
+                            <button data-screen="contribute" class="nav-item flex flex-col items-center text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
+                                <span class="text-xs font-medium"><span data-lang="bn">অবদান</span><span data-lang="en">Contribute</span></span>
+                            </button>
+                            <button data-screen="leaderboard" class="nav-item flex flex-col items-center text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.34 3.03a1 1 0 01.63 1.26l-1 4a1 1 0 01-1.88-.46l1-4a1 1 0 011.25-.8zM8.66 3.03a1 1 0 011.25.8l-1 4a1 1 0 01-1.88-.46l1-4a1 1 0 01.63-1.26zM12 10a1 1 0 011 1v6a1 1 0 11-2 0v-6a1 1 0 011-1zm-3-1a1 1 0 10-2 0v6a1 1 0 102 0v-6a1 1 0 00-1-1zm-2 2a1 1 0 100 2h8a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
+                                <span class="text-xs font-medium"><span data-lang="bn">লিডারবোর্ড</span><span data-lang="en">Leaderboard</span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hidden App Screen Templates -->
+        <div id="app-templates" class="hidden">
+            <div id="template-dashboard">
+                <div class="text-center">
+                    <p class="text-gray-500"><span data-lang="bn">আপনার বর্তমান ব্যালেন্স</span><span data-lang="en">Your Current Balance</span></p>
+                    <p class="text-5xl font-bold text-green-600 my-2">GP 1,250</p>
+                    <p class="text-sm text-gray-500"><span data-lang="bn">(৳ ১২৫ সমমূল্যের)</span><span data-lang="en">(Equal to ৳125)</span></p>
+                </div>
+                <div class="mt-8">
+                    <h3 class="font-bold text-lg mb-2"><span data-lang="bn">আপনার প্রভাব</span><span data-lang-en">Your Impact</span></h3>
+                    <div class="space-y-3">
+                        <div class="bg-blue-50 p-3 rounded-lg flex items-center justify-between">
+                            <div>
+                                <p class="font-semibold"><span data-lang="bn">মোট বোতল রিসাইকেল</span><span data-lang="en">Total Bottles Recycled</span></p>
+                                <p class="text-gray-500 text-sm"><span data-lang="bn">এই মাসে</span><span data-lang-en">This Month</span></p>
+                            </div>
+                            <p class="font-bold text-lg text-blue-600">85</p>
+                        </div>
+                        <div class="bg-yellow-50 p-3 rounded-lg flex items-center justify-between">
+                             <div>
+                                <p class="font-semibold"><span data-lang="bn">দান করা খাবার</span><span data-lang-en">Meals Donated</span></p>
+                                <p class="text-gray-500 text-sm"><span data-lang="bn">সর্বমোট</span><span data-lang-en">All Time</span></p>
+                            </div>
+                            <p class="font-bold text-lg text-yellow-600">12</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="mt-8 text-center">
+                    <button class="w-full bg-green-600 text-white font-bold py-3 px-5 rounded-lg hover:bg-green-700 transition-colors">
+                        <span data-lang="bn">কালেক্টরকে স্ক্যান করুন</span><span data-lang="en">Scan Collector</span>
+                    </button>
+                </div>
+            </div>
+            <div id="template-contribute">
+                <h3 class="font-bold text-xl mb-4"><span data-lang="bn">একটি উদ্দেশ্য বেছে নিন</span><span data-lang="en">Choose a Cause</span></h3>
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-lg border-2 border-green-500 shadow-md">
+                        <img src="https://placehold.co/300x100/E2F5E9/16A34A?text=As-Sunnah" class="rounded mb-2">
+                        <h4 class="font-bold"><span data-lang="bn">মানবিক সহায়তা</span><span data-lang="en">Humanitarian Aid</span></h4>
+                        <p class="text-sm text-gray-600 mb-2"><span data-lang="bn">আস-সুন্নাহ ফাউন্ডেশনের সাথে</span><span data-lang="en">with As-Sunnah Foundation</span></p>
+                        <button class="w-full bg-green-600 text-white font-bold py-2 rounded-lg text-sm"><span data-lang="bn">GP 500 দান করুন</span><span data-lang="en">Donate GP 500</span></button>
+                    </div>
+                     <div class="bg-white p-4 rounded-lg border">
+                        <img src="https://placehold.co/300x100/F0F9FF/0284C7?text=Khidmate+Khalq" class="rounded mb-2">
+                        <h4 class="font-bold"><span data-lang="bn">দরিদ্রদের জন্য বস্ত্র</span><span data-lang="en">Clothes for the Needy</span></h4>
+                        <p class="text-sm text-gray-600 mb-2"><span data-lang="bn">খিদমতে খলক ফাউন্ডেশনের সাথে</span><span data-lang="en">with Khidmate Khalq Foundation</span></p>
+                        <button class="w-full bg-gray-300 text-gray-600 font-bold py-2 rounded-lg text-sm cursor-not-allowed"><span data-lang="bn">অপর্যাপ্ত পয়েন্ট</span><span data-lang="en">Not Enough Points</span></button>
+                    </div>
+                </div>
+            </div>
+            <div id="template-leaderboard">
+                <h3 class="font-bold text-xl mb-4"><span data-lang="bn">সেরা কমিউনিটি</span><span data-lang-en">Top Communities</span></h3>
+                <p class="text-sm text-gray-500 mb-4"><span data-lang="bn">গুলশান এলাকা</span><span data-lang="en">Gulshan Area</span></p>
+                 <div class="space-y-3">
+                    <div class="bg-yellow-100 p-3 rounded-lg flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold text-lg">🥇</span>
+                            <p class="font-semibold"><span data-lang="bn">লেকশোর অ্যাপার্টমেন্ট</span><span data-lang="en">Lakeshore Apts.</span></p>
+                        </div>
+                        <p class="font-bold text-yellow-700">GP 15,400</p>
+                    </div>
+                    <div class="bg-gray-200 p-3 rounded-lg flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                           <span class="font-bold text-lg">🥈</span>
+                            <p class="font-semibold"><span data-lang="bn">গার্ডেন ভিউ</span><span data-lang="en">Garden View</span></p>
+                        </div>
+                        <p class="font-bold text-gray-700">GP 12,150</p>
+                    </div>
+                    <div class="bg-orange-100 p-3 rounded-lg flex items-center justify-between">
+                         <div class="flex items-center space-x-3">
+                           <span class="font-bold text-lg">🥉</span>
+                            <p class="font-semibold"><span data-lang="bn">আপনার বিল্ডিং</span><span data-lang="en">Your Building</span></p>
+                        </div>
+                        <p class="font-bold text-orange-700">GP 9,800</p>
+                    </div>
+                     <div class="bg-gray-50 p-3 rounded-lg flex items-center justify-between border">
+                         <div class="flex items-center space-x-3">
+                           <span class="font-bold text-lg">4.</span>
+                            <p class="font-semibold"><span data-lang="bn">রোজ গার্ডেন</span><span data-lang="en">Rose Garden</span></p>
+                        </div>
+                        <p class="font-bold text-gray-500">GP 8,200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- More Than Cash Section -->
+        <section id="why-join" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        <span data-lang="bn">শুধু টাকার চেয়েও বেশি কিছু</span><span data-lang="en">More Than Just Cash</span>
+                    </h2>
+                    <p class="mt-4 text-gray-600 text-lg">
+                        <span data-lang="bn">আপনার উপার্জন করা গ্রিন পয়েন্টস আপনাকে বেছে নেওয়ার ক্ষমতা দেয়।</span><span data-lang="en">Your Green Points give you the power to choose.</span>
+                    </p>
+                </div>
+                 <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"><h3 class="text-2xl font-bold text-green-600 mb-4"><span data-lang="bn">অবদান রাখুন</span><span data-lang="en">Contribute</span></h3><p class="text-gray-600"><span data-lang="bn">আপনার পয়েন্টগুলি আমাদের বিশ্বস্ত পার্টনার চ্যারিটিতে দান করে সামাজিক পরিবর্তনে সাহায্য করুন। অ্যাপের মাধ্যমে আপনার অবদানের প্রভাব দেখুন।</span><span data-lang="en">Donate your points to our trusted partner charities and make a social impact. Track the effect of your contribution right from the app.</span></p></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"><h3 class="text-2xl font-bold text-blue-600 mb-4"><span data-lang="bn">প্রতিযোগিতা করুন</span><span data-lang="en">Compete</span></h3><p class="text-gray-600"><span data-lang="bn">আপনার অ্যাপার্টমেন্ট বা এলাকার জন্য পয়েন্ট অর্জন করুন এবং লিডারবোর্ডে শীর্ষস্থান দখল করুন। "সবুজতম কমিউনিটি" হিসেবে স্বীকৃতি পান।</span><span data-lang="en">Earn points for your apartment or neighborhood and climb the leaderboards. Get recognized as the "Greenest Community."</span></p></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"><h3 class="text-2xl font-bold text-yellow-600 mb-4"><span data-lang="bn">ক্যাশ আউট</span><span data-lang="en">Cash Out</span></h3><p class="text-gray-600"><span data-lang="bn">আপনার প্রয়োজনে, যেকোনো সময় আপনার পয়েন্টগুলিকে টাকায় পরিণত করে মোবাইল পেমেন্টের মাধ্যমে তুলে নিন।</span><span data-lang="en">If you need it, convert your points into cash anytime and receive it instantly via mobile financial services.</span></p></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Impact Calculator Section -->
+        <section id="impact-calculator" class="bg-green-50 py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900"><span data-lang="bn">আপনার প্রভাব কল্পনা করুন</span><span data-lang="en">Visualize Your Impact</span></h2>
+                    <p class="mt-4 text-gray-600 text-lg"><span data-lang="bn">দেখুন কিভাবে আপনার ছোট পদক্ষেপগুলো একটি বড় পরিবর্তন নিয়ে আসে।</span><span data-lang="en">See how your small actions add up to a big difference.</span></p>
+                </div>
+                <div class="mt-12 max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg border">
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <label for="pet-slider" class="font-semibold text-lg"><span data-lang="bn">সাপ্তাহিক PET বোতল:</span><span data-lang="en">Weekly PET Bottles:</span></label>
+                            <input id="pet-slider" type="range" min="0" max="50" value="10" class="w-full md:w-1/2 mt-2 md:mt-0 mx-4">
+                            <span id="pet-count" class="font-bold text-2xl text-green-600 w-12 text-center">10</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <label for="hdpe-slider" class="font-semibold text-lg"><span data-lang="bn">সাপ্তাহিক HDPE কন্টেইনার:</span><span data-lang="en">Weekly HDPE Containers:</span></label>
+                            <input id="hdpe-slider" type="range" min="0" max="50" value="5" class="w-full md:w-1/2 mt-2 md:mt-0 mx-4">
+                            <span id="hdpe-count" class="font-bold text-2xl text-green-600 w-12 text-center">5</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t pt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+                        <div>
+                            <p class="text-lg font-semibold"><span data-lang="bn">বার্ষিক মোট আইটেম</span><span data-lang="en">Total Items Annually</span></p>
+                            <p class="text-3xl font-bold text-blue-600 mt-2" id="yearly-items">780</p>
+                            <p class="text-gray-600"><span data-lang="bn">আইটেম ডাইভার্ট করা হয়েছে</span><span data-lang="en">Items Diverted</span></p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold"><span data-lang="bn">সামাজিক প্রভাব</span><span data-lang="en">Social Impact</span></p>
+                            <p class="text-3xl font-bold text-yellow-600 mt-2" id="social-impact">6+</p>
+                            <p class="text-gray-600"><span data-lang="bn">শিশুর জন্য খাবার</span><span data-lang="en">Meals for Children</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- For Collectors Section -->
+        <section class="bg-green-700 text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold"><span data-lang="bn">আমাদের সবুজ হিরোদের ক্ষমতায়ন</span><span data-lang="en">Empowering Our Green Heroes</span></h2>
+                <p class="mt-4 text-green-200 text-lg max-w-3xl mx-auto"><span data-lang="bn">আমরা শহরের বিদ্যমান বর্জ্য সংগ্রাহকদের সাথে অংশীদারিত্ব করি। আমাদের "প্রো এজেন্ট" হিসেবে, তারা প্রযুক্তি ব্যবহার করে আয় এবং সম্মান বৃদ্ধি করে, যা একটি পরিচ্ছন্ন ঢাকা গড়তে সাহায্য করে।</span><span data-lang="en">We partner with the city's existing waste collectors. As our "Pro Agents," they use technology to increase their income and dignity, helping to build a cleaner Dhaka.</span></p>
+                <div class="mt-8"><a href="#" class="bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-green-100 transition-colors text-lg"><span data-lang="bn">আরও জানুন</span><span data-lang="en">Learn More</span></a></div>
+            </div>
+        </section>
+
+        <!-- Our Ecosystem Section -->
+        <section id="ecosystem" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900"><span data-lang="bn">আমাদের ক্রমবর্ধমান ইকোসিস্টেম</span><span data-lang="en">Our Growing Ecosystem</span></h2>
+                    <p class="mt-4 text-gray-600 text-lg"><span data-lang="bn">আমরা বিশ্বাসযোগ্য পার্টনারদের সাথে কাজ করি একটি শক্তিশালী এবং স্বচ্ছ ভ্যালু চেইন তৈরি করতে।</span><span data-lang="en">We work with trusted partners to create a strong, transparent value chain.</span></p>
+                </div>
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
+                    <img src="https://placehold.co/200x100?text=As-Sunnah" alt="As-Sunnah Foundation Logo" class="mx-auto">
+                    <img src="https://placehold.co/200x100?text=Khidmate+Khalq" alt="Khidmate Khalq Foundation Logo" class="mx-auto">
+                    <img src="https://placehold.co/200x100?text=Akij+Group" alt="Akij Group Logo" class="mx-auto">
+                    <img src="https://placehold.co/200x100?text=BRAC" alt="BRAC Logo" class="mx-auto">
+                    <img src="https://placehold.co/200x100?text=City+Corporation" alt="City Corporation Logo" class="mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="bg-gray-50 py-20 md:py-28">
+            <div class="container mx-auto px-6 max-w-4xl">
+                 <div class="text-center"><h2 class="text-3xl md:text-4xl font-bold text-gray-900"><span data-lang="bn">সাধারণ জিজ্ঞাসা</span><span data-lang="en">Frequently Asked Questions</span></h2></div>
+                <div class="mt-12 space-y-6">
+                    <details class="bg-white p-6 rounded-lg border"><summary class="font-semibold text-lg cursor-pointer flex justify-between items-center"><span data-lang="bn">এই সেবাটি ব্যবহার করতে কি কোনো খরচ আছে?</span><span data-lang="en">Is there any cost to use this service?</span><span class="transform transition-transform duration-300 ">+</span></summary><p class="mt-4 text-gray-600"><span data-lang="bn">না, পরিবারের জন্য ট্র্যাশ টাকা ব্যবহার করা সম্পূর্ণ বিনামূল্যে। আমরা আপনাকে আপনার বর্জ্যের জন্য পুরস্কৃত করি!</span><span data-lang="en">No, Trash Taka is completely free for households. We reward you for your waste!</span></p></details>
+                    <details class="bg-white p-6 rounded-lg border"><summary class="font-semibold text-lg cursor-pointer flex justify-between items-center"><span data-lang="bn">কোন ধরনের প্লাস্টিক আমি দিতে পারব?</span><span data-lang="en">What kind of plastic can I give?</span><span class="transform transition-transform duration-300 ">+</span></summary><p class="mt-4 text-gray-600"><span data-lang="bn">আপাতত আমরা পরিষ্কার PET বোতল (যেমন পানির বোতল) এবং HDPE কন্টেইনার (যেমন শ্যাম্পুর বোতল) গ্রহণ করছি। অ্যাপ চালু হওয়ার সময় আমরা একটি সম্পূর্ণ তালিকা প্রদান করব।</span><span data-lang="en">Initially, we are accepting clean PET bottles (like water bottles) and HDPE containers (like shampoo bottles). We will provide a full list at launch.</span></p></details>
+                    <details class="bg-white p-6 rounded-lg border"><summary class="font-semibold text-lg cursor-pointer flex justify-between items-center"><span data-lang="bn">আমার এলাকা কি আপনাদের সেবার আওতায় আছে?</span><span data-lang="en">Is my area covered by your service?</span><span class="transform transition-transform duration-300 ">+</span></summary><p class="mt-4 text-gray-600"><span data-lang="bn">আমরা গুলশান, বনানী এবং ধানমন্ডির মতো কয়েকটি নির্বাচিত এলাকায় একটি পাইলট প্রোগ্রাম দিয়ে শুরু করছি। আপনার আগ্রহ জানাতে আমাদের সবুজ আন্দোলনে যোগ দিন, আমরা আপনার এলাকায় এলে আপনাকে জানাব!</span><span data-lang="en">We are starting with a pilot program in select areas like Gulshan, Banani, and Dhanmondi. Join the movement to register your interest, and we'll notify you when we expand to your area!</span></p></details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="join-movement" class="bg-green-600">
+            <div class="container mx-auto px-6 py-20 text-center text-white">
+                <h2 class="text-4xl font-bold"><span data-lang="bn">একটি সবুজ ঢাকার জন্য আন্দোলনে যোগ দিন</span><span data-lang="en">Join the Movement for a Greener Dhaka</span></h2>
+                <p class="mt-4 text-lg text-green-100 max-w-xl mx-auto"><span data-lang="bn">ট্র্যাশ টাকা ব্যবহারকারীদের মধ্যে প্রথম হন। একজন সবুজ পার্টনার হিসেবে, আপনি একটি পরিচ্ছন্ন শহর গড়তে আমাদের সাহায্য করবেন এবং এক্সক্লুসিভ অ্যাক্সেস ও পুরস্কার পাবেন।</span><span data-lang="en">Be among the first to use Trash Taka. As a Green Partner, you'll help us build a cleaner city and get exclusive early access and rewards.</span></p>
+                <div class="mt-8 max-w-md mx-auto">
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="যোগ দিতে আপনার ইমেইল দিন" class="w-full px-5 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500" required>
+                        <button type="submit" class="bg-gray-900 text-white font-bold py-3 px-8 rounded-full hover:bg-black transition-colors"><span data-lang="bn">আমিও আছি!</span><span data-lang="en">Count Me In!</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                <span class="text-2xl">♻️</span>
+                <span class="text-2xl font-bold font-inter">Trash Taka</span>
+            </div>
+            <p class="text-gray-400 font-semibold"><span data-lang="bn">ট্র্যাশ-টাকা, গ্রিন-ঢাকা</span><span data-lang="en">Trash-Taka, Green-Dhaka</span></p>
+            <p class="text-gray-500 mt-2"><span data-lang="bn">একটি পরিচ্ছন্ন আগামী গড়ার লক্ষ্যে।</span><span data-lang="en">Building a cleaner tomorrow.</span></p>
+            <div class="mt-6 text-sm text-gray-500">&copy; 2025 Trash Taka. <span data-lang="bn">সর্বস্বত্ব সংরক্ষিত।</span><span data-lang="en">All Rights Reserved.</span></div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Language Switcher
+            const langSwitcher = document.getElementById('lang-switcher');
+            const html = document.documentElement;
+
+            const setLanguage = (lang) => {
+                html.lang = lang;
+                if (lang === 'en') {
+                    html.classList.add('en');
+                } else {
+                    html.classList.remove('en');
+                }
+                localStorage.setItem('trashTakaLang', lang);
+            };
+
+            langSwitcher.addEventListener('click', () => {
+                const newLang = html.lang === 'bn' ? 'en' : 'bn';
+                setLanguage(newLang);
+            });
+
+            const savedLang = localStorage.getItem('trashTakaLang');
+            if (savedLang) {
+                setLanguage(savedLang);
+            }
+
+            // Impact Calculator
+            const petSlider = document.getElementById('pet-slider');
+            const petCount = document.getElementById('pet-count');
+            const hdpeSlider = document.getElementById('hdpe-slider');
+            const hdpeCount = document.getElementById('hdpe-count');
+            const yearlyItems = document.getElementById('yearly-items');
+            const socialImpact = document.getElementById('social-impact');
+
+            const updateImpact = () => {
+                const weeklyPetVal = parseInt(petSlider.value);
+                const weeklyHdpeVal = parseInt(hdpeSlider.value);
+
+                petCount.textContent = weeklyPetVal;
+                hdpeCount.textContent = weeklyHdpeVal;
+                
+                const yearlyTotalItems = (weeklyPetVal + weeklyHdpeVal) * 52;
+                yearlyItems.textContent = yearlyTotalItems.toLocaleString('en-US');
+                
+                // Assuming 1 HDPE is equivalent to 2 PET bottles for impact calculation
+                const yearlyEquivalentValue = (weeklyPetVal * 1) + (weeklyHdpeVal * 2);
+
+                // Assuming 100 "equivalent points" recycled = 1 meal for a child.
+                const meals = Math.floor((yearlyEquivalentValue * 52) / 100);
+                socialImpact.textContent = `${meals}+`;
+            };
+
+            petSlider.addEventListener('input', updateImpact);
+            hdpeSlider.addEventListener('input', updateImpact);
+            updateImpact(); 
+
+            // App Tour Interactivity
+            const screenContent = document.getElementById('phone-screen-content');
+            const navItems = document.querySelectorAll('.nav-item');
+            const templates = {
+                dashboard: document.getElementById('template-dashboard').innerHTML,
+                contribute: document.getElementById('template-contribute').innerHTML,
+                leaderboard: document.getElementById('template-leaderboard').innerHTML,
+            };
+
+            const switchScreen = (screenName) => {
+                // Fade out
+                screenContent.style.opacity = 0;
+
+                setTimeout(() => {
+                    screenContent.innerHTML = templates[screenName];
+                    
+                    // Update active nav item
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.dataset.screen === screenName) {
+                            item.classList.add('active');
+                        }
+                    });
+
+                    // Fade in
+                    screenContent.style.opacity = 1;
+                }, 150);
+            };
+
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    switchScreen(item.dataset.screen);
+                });
+            });
+
+            // Initial load
+            switchScreen('dashboard');
+            
+            // FAQ Accordion
+            const detailsElements = document.querySelectorAll('details');
+            detailsElements.forEach(details => {
+                details.addEventListener('toggle', event => {
+                    const summary = details.querySelector('summary');
+                    const icon = summary.querySelector('span:last-child');
+                    if (details.open) {
+                        icon.classList.add('rotate-45');
+                    } else {
+                        icon.classList.remove('rotate-45');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
