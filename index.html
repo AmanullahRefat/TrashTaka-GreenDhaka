@@ -44,22 +44,38 @@
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl">♻️</span>
-                <span class="text-2xl font-bold text-green-600 font-inter">Trash Taka</span>
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-2xl">♻️</span>
+                    <span class="text-2xl font-bold text-green-600 font-inter">Trash Taka</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">যেভাবে কাজ করে</span><span data-lang="en">How It Works</span></a>
+                    <a href="#app-tour" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">অ্যাপ পরিচিতি</span><span data-lang="en">App Tour</span></a>
+                    <a href="#why-join" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">কেন যোগ দেবেন</span><span data-lang="en">Why Join</span></a>
+                    <a href="#faq" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">প্রশ্নোত্তর</span><span data-lang="en">FAQ</span></a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                     <button id="lang-switcher" class="text-sm font-semibold text-gray-500 hover:text-green-600 border rounded-full px-3 py-1">
+                        <span data-lang="bn">English</span><span data-lang="en">বাংলা</span>
+                    </button>
+                    <a href="#join-movement" class="hidden sm:block bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-colors shadow-md">
+                        <span data-lang="bn">আন্দোলনে যোগ দিন</span><span data-lang="en">Join the Movement</span>
+                    </a>
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-green-600 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
             </div>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#how-it-works" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">যেভাবে কাজ করে</span><span data-lang="en">How It Works</span></a>
-                <a href="#app-tour" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">অ্যাপ পরিচিতি</span><span data-lang="en">App Tour</span></a>
-                <a href="#why-join" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">কেন যোগ দেবেন</span><span data-lang="en">Why Join</span></a>
-                <a href="#faq" class="text-gray-600 hover:text-green-600 font-medium"><span data-lang="bn">প্রশ্নোত্তর</span><span data-lang="en">FAQ</span></a>
-            </nav>
-            <div class="flex items-center space-x-4">
-                 <button id="lang-switcher" class="text-sm font-semibold text-gray-500 hover:text-green-600 border rounded-full px-3 py-1">
-                    <span data-lang="bn">English</span><span data-lang="en">বাংলা</span>
-                </button>
-                <a href="#join-movement" class="bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-colors shadow-md">
+             <!-- Mobile menu, show/hide based on menu state. -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#how-it-works" class="mobile-menu-link block py-2 px-4 text-sm hover:bg-green-50 rounded"><span data-lang="bn">যেভাবে কাজ করে</span><span data-lang="en">How It Works</span></a>
+                <a href="#app-tour" class="mobile-menu-link block py-2 px-4 text-sm hover:bg-green-50 rounded"><span data-lang="bn">অ্যাপ পরিচিতি</span><span data-lang="en">App Tour</span></a>
+                <a href="#why-join" class="mobile-menu-link block py-2 px-4 text-sm hover:bg-green-50 rounded"><span data-lang="bn">কেন যোগ দেবেন</span><span data-lang="en">Why Join</span></a>
+                <a href="#faq" class="mobile-menu-link block py-2 px-4 text-sm hover:bg-green-50 rounded"><span data-lang="bn">প্রশ্নোত্তর</span><span data-lang="en">FAQ</span></a>
+                 <a href="#join-movement" class="mobile-menu-link sm:hidden mt-4 block text-center bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-colors shadow-md">
                     <span data-lang="bn">আন্দোলনে যোগ দিন</span><span data-lang="en">Join the Movement</span>
                 </a>
             </div>
@@ -197,13 +213,13 @@
                         <div class="bg-blue-50 p-3 rounded-lg flex items-center justify-between">
                             <div>
                                 <p class="font-semibold"><span data-lang="bn">মোট বোতল রিসাইকেল</span><span data-lang="en">Total Bottles Recycled</span></p>
-                                <p class="text-gray-500 text-sm"><span data-lang="bn">এই মাসে</span><span data-lang-en">This Month</span></p>
+                                <p class="text-gray-500 text-sm"><span data-lang="bn">এই মাসে</span><span data-lang="en">This Month</span></p>
                             </div>
                             <p class="font-bold text-lg text-blue-600">85</p>
                         </div>
                         <div class="bg-yellow-50 p-3 rounded-lg flex items-center justify-between">
                              <div>
-                                <p class="font-semibold"><span data-lang="bn">দান করা খাবার</span><span data-lang-en">Meals Donated</span></p>
+                                <p class="font-semibold"><span data-lang="bn">দান করা খাবার</span><span data-lang="en">Meals Donated</span></p>
                                 <p class="text-gray-500 text-sm"><span data-lang="bn">সর্বমোট</span><span data-lang-en">All Time</span></p>
                             </div>
                             <p class="font-bold text-lg text-yellow-600">12</p>
@@ -217,7 +233,7 @@
                 </div>
             </div>
             <div id="template-contribute">
-                <h3 class="font-bold text-xl mb-4"><span data-lang="bn">একটি উদ্দেশ্য বেছে নিন</span><span data-lang="en">Choose a Cause</span></h3>
+                <h3 class="font-bold text-xl mb-4"><span data-lang="bn">একটি উদ্দেশ্য বেছে নিন</span><span data-lang-en">Choose a Cause</span></h3>
                 <div class="space-y-4">
                     <div class="bg-white p-4 rounded-lg border-2 border-green-500 shadow-md">
                         <img src="https://placehold.co/300x100/E2F5E9/16A34A?text=As-Sunnah" class="rounded mb-2">
@@ -228,7 +244,7 @@
                      <div class="bg-white p-4 rounded-lg border">
                         <img src="https://placehold.co/300x100/F0F9FF/0284C7?text=Khidmate+Khalq" class="rounded mb-2">
                         <h4 class="font-bold"><span data-lang="bn">দরিদ্রদের জন্য বস্ত্র</span><span data-lang="en">Clothes for the Needy</span></h4>
-                        <p class="text-sm text-gray-600 mb-2"><span data-lang="bn">খিদমতে খলক ফাউন্ডেশনের সাথে</span><span data-lang="en">with Khidmate Khalq Foundation</span></p>
+                        <p class="text-sm text-gray-600 mb-2"><span data-lang="bn">খিদমতে খলক ফাউন্ডেশনের সাথে</span><span data-lang-en">with Khidmate Khalq Foundation</span></p>
                         <button class="w-full bg-gray-300 text-gray-600 font-bold py-2 rounded-lg text-sm cursor-not-allowed"><span data-lang="bn">অপর্যাপ্ত পয়েন্ট</span><span data-lang="en">Not Enough Points</span></button>
                     </div>
                 </div>
@@ -329,7 +345,7 @@
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-3xl md:text-4xl font-bold"><span data-lang="bn">আমাদের সবুজ হিরোদের ক্ষমতায়ন</span><span data-lang="en">Empowering Our Green Heroes</span></h2>
                 <p class="mt-4 text-green-200 text-lg max-w-3xl mx-auto"><span data-lang="bn">আমরা শহরের বিদ্যমান বর্জ্য সংগ্রাহকদের সাথে অংশীদারিত্ব করি। আমাদের "প্রো এজেন্ট" হিসেবে, তারা প্রযুক্তি ব্যবহার করে আয় এবং সম্মান বৃদ্ধি করে, যা একটি পরিচ্ছন্ন ঢাকা গড়তে সাহায্য করে।</span><span data-lang="en">We partner with the city's existing waste collectors. As our "Pro Agents," they use technology to increase their income and dignity, helping to build a cleaner Dhaka.</span></p>
-                <div class="mt-8"><a href="#" class="bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-green-100 transition-colors text-lg"><span data-lang="bn">আরও জানুন</span><span data-lang="en">Learn More</span></a></div>
+                <div class="mt-8"><a href="#" class="bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-green-100 transition-colors text-lg"><span data-lang="bn">আরও জানুন</span><span data-lang-en">Learn More</span></a></div>
             </div>
         </section>
 
@@ -417,6 +433,22 @@
                 setLanguage(savedLang);
             }
 
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('.mobile-menu-link');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
             // Impact Calculator
             const petSlider = document.getElementById('pet-slider');
             const petCount = document.getElementById('pet-count');
@@ -502,4 +534,5 @@
     </script>
 </body>
 </html>
+
 
